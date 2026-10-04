@@ -1,0 +1,146 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Snake and Ladder Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="extras.css">
+</head>
+<body>
+<main class="app-shell">
+<section id="home" class="screen home-screen">
+<div class="home-art">
+<div class="home-snake">〰〰〰</div>
+<div class="dice-art">⚀</div>
+</div>
+<p class="eyebrow">SNAKE AND LADDER GAME</p>
+<h1>Snake <span>&</span> Ladder</h1>
+<p class="subtitle">A little luck. A lot of adventure.</p>
+<div class="home-actions">
+<button class="roll-btn" id="homePlay">PLAY GAME <span>&#8599;</span>
+</button>
+<button class="new-game" id="homeSettings">&#9881; GAME SETTINGS</button>
+</div>
+<p class="home-note">Up to 4 players &bull; 7 maps &bull; Endless fun</p>
+</section>
+<section id="setup" class="screen setup-screen hidden">
+<button class="back-btn" id="backHome">&#8592; Home</button>
+<div class="setup-card">
+<p class="eyebrow">READY YOUR ADVENTURE</p>
+<h2>Game settings</h2>
+<div class="setting-grid">
+<label>Players<select id="playerCount">
+<option value="2">2 players</option>
+<option value="3">3 players</option>
+<option value="4">4 players</option>
+</select>
+</label>
+<label>Map<select id="mapChoice">
+<option value="random">&#127922; Random map</option>
+<option value="classic">Classic Garden</option>
+<option value="sunset">Sunset Valley</option>
+<option value="ocean">Ocean Reef</option>
+<option value="forest">Mystic Forest</option>
+<option value="candy">Candy Kingdom</option>
+<option value="space">Cosmic Climb</option>
+<option value="volcano">Volcano Run</option>
+</select>
+</label>
+<label>Theme<select id="themeChoice">
+<option value="lavender">Lavender Dream</option>
+<option value="sunrise">Warm Sunrise</option>
+<option value="midnight">Midnight Arcade</option>
+<option value="forestTheme">Forest Glow</option>
+</select>
+</label>
+<label>Volume<input id="volumeChoice" type="range" min="0" max="100" value="70">
+<span id="volumeValue">70%</span>
+</label>
+</div>
+<div class="toggle-row">
+<label>
+<input type="checkbox" id="animationChoice" checked> Smooth animations</label>
+<label>
+<input type="checkbox" id="soundChoice" checked> Sound effects</label>
+</div>
+<button class="roll-btn" id="startGame">START ADVENTURE <span>&#8599;</span>
+</button>
+</div>
+</section>
+<section id="game" class="screen hidden">
+<section class="hero">
+<div>
+<p class="eyebrow">SNAKE AND LADDER GAME &middot; <span id="mapName">CLASSIC GARDEN</span>
+</p>
+<h1>Snake <span>&</span> Ladder</h1>
+<p class="subtitle">Roll the dice. Climb high. Watch your step.</p>
+</div>
+<div class="hero-actions">
+<button class="icon-button" id="soundBtn">&#128266;</button>
+<button class="icon-button" id="pauseBtn">&#10074;&#10074;</button>
+</div>
+</section>
+<section class="game-layout">
+<div class="board-wrap">
+<div class="board" id="board">
+</div>
+</div>
+<aside class="panel">
+<div class="turn-card">
+<div class="turn-label">CURRENT TURN</div>
+<div class="turn-player">
+<span class="player-dot" id="turnDot">
+</span>
+<strong id="turnName">Player 1</strong>
+</div>
+<div class="turn-message" id="message">Roll the dice to start your adventure!</div>
+</div>
+<div class="dice-area">
+<div class="dice" id="dice">&#9859;</div>
+<button class="roll-btn" id="rollBtn">ROLL DICE <span>&#8599;</span>
+</button>
+</div>
+<div class="players">
+<div class="section-title">PLAYERS</div>
+<div id="playerList">
+</div>
+</div>
+<div class="game-actions">
+<button class="new-game" id="restart">&#8634; RESTART</button>
+<button class="new-game primary-action" id="newGame">&#9881; SETTINGS</button>
+</div>
+</aside>
+</section>
+<footer>
+<span>First to reach 100 wins</span>
+<span>&bull;</span>
+<span id="footerMap">Classic Garden</span>
+</footer>
+</section>
+</main>
+<div class="pause-screen hidden" id="pauseScreen">
+<div class="pause-card">
+<div class="trophy">&#9208;</div>
+<p class="eyebrow">GAME PAUSED</p>
+<h2>Take a breather</h2>
+<button class="roll-btn" id="resumeBtn">RESUME GAME</button>
+</div>
+</div>
+<div class="modal hidden" id="winnerModal">
+<div class="modal-card">
+<div class="trophy">&#127942;</div>
+<p class="eyebrow">WE HAVE A WINNER</p>
+<h2 id="winnerName">Player 1 wins!</h2>
+<p id="winnerText">What a climb!</p>
+<button class="roll-btn" id="playAgain">PLAY AGAIN</button>
+</div>
+</div>
+<script src="script.js">
+</script>
+</body>
+</html>
+

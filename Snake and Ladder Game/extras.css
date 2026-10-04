@@ -1,0 +1,209 @@
+﻿.hidden {
+  display:none!important}
+.home-screen,.setup-screen {
+  min-height:80vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center}
+.home-art {
+  height:160px;
+  width:250px;
+  position:relative}
+.home-snake {
+  font-size:56px;
+  color:#54bd91;
+  letter-spacing:-12px;
+  transform:rotate(-8deg);
+  padding-top:55px}
+.dice-art {
+  font-size:68px;
+  position:absolute;
+  right:10px;
+  top:8px;
+  filter:drop-shadow(0 10px 5px #7563ee33)}
+.home-screen h1 {
+  font:800 clamp(48px,8vw,84px)/.9 'Baloo 2';
+  letter-spacing:-3px;
+  margin:0}
+.home-screen h1 span {
+  color:var(--coral)}
+.home-actions {
+  display:flex;
+  gap:12px;
+  margin-top:25px;
+  width:min(330px,90vw);
+  flex-direction:column}
+.home-actions .new-game {
+  padding:14px}
+.home-note {
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800;
+  margin-top:24px}
+.back-btn {
+  align-self:flex-start;
+  border:0;
+  background:transparent;
+  color:var(--violet);
+  font:900 14px Nunito;
+  cursor:pointer}
+.setup-card {
+  background:#fff;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 20px 50px #5b42702b;
+  width:min(550px,94vw);
+  text-align:left}
+.setup-card h2 {
+  font:800 38px 'Baloo 2';
+  margin:0 0 20px}
+.setting-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px}
+.setting-grid label {
+  font-size:11px;
+  font-weight:900;
+  color:#837a9c;
+  display:flex;
+  flex-direction:column;
+  gap:6px}
+.setting-grid select,.setting-grid input[type=range] {
+  border:0;
+  background:#f5f1ff;
+  border-radius:10px;
+  padding:11px;
+  color:var(--ink);
+  font:800 13px Nunito}
+.setting-grid input[type=range] {
+  padding:10px 3px}
+.setting-grid label span {
+  color:var(--violet);
+  font-size:10px}
+.toggle-row {
+  display:flex;
+  gap:15px;
+  margin:20px 0;
+  font-size:12px;
+  font-weight:800;
+  color:var(--muted)}
+.setup-card>.roll-btn {
+  margin-top:4px}
+.hero-actions {
+  display:flex;
+  gap:10px}
+.game-actions {
+  display:flex;
+  gap:8px}
+.game-actions .new-game {
+  flex:1}
+.primary-action {
+  background:#f1edff;
+  color:var(--violet)}
+.pause-screen {
+  position:fixed;
+  inset:0;
+  background:#29213dcc;
+  display:grid;
+  place-items:center;
+  z-index:9}
+.pause-screen.hidden {
+  display:none}
+.pause-card {
+  text-align:center;
+  background:#fff;
+  border-radius:25px;
+  padding:36px;
+  min-width:min(360px,85vw);
+  box-shadow:0 25px 70px #1d153066}
+.pause-card h2 {
+  font:800 34px 'Baloo 2';
+  margin:5px 0 22px}
+.token.p3 {
+  background:#f3b83f;
+  transform:translate(-13px,-12px)}
+.token.p4 {
+  background:#3bb99a;
+  transform:translate(13px,-12px)}
+.avatar.gold {
+  background:#f3b83f}
+.avatar.teal {
+  background:#3bb99a}
+.snake {
+  height:var(--route-length, 120px);
+  width:29px;
+  box-sizing:border-box;
+  border-radius:52% 48% 55% 45%;
+  background:linear-gradient(90deg,#318e78,#73d7a2 48%,#2d9679);
+  box-shadow:inset 6px 0 #267a68,0 3px 4px #376a5a66;
+  transform-origin:center center}
+.snake:before {
+  content:'';
+  height:34px;
+  left:50%;
+  top:-12px;
+  right:auto;
+  transform:translateX(-50%);
+  position:absolute;
+  width:32px;
+  background:#49ba8d;
+  border-radius:60% 60% 40% 40%;
+  background-image:
+    radial-gradient(circle at 10px 12px,#fff 0 3px,#25344a 3px 5px,transparent 5.5px),
+    radial-gradient(circle at 22px 12px,#fff 0 3px,#25344a 3px 5px,transparent 5.5px)}
+.snake:after {
+  content:'';
+  position:absolute;
+  bottom:-8px;
+  left:12px;
+  width:5px;
+  height:18px;
+  background:#f07471;
+  border-radius:50%;
+  transform:rotate(10deg)}
+body[data-theme=sunrise] {
+  background:radial-gradient(circle at 15% 10%,#fff 0,#fff3db 42%,#ffe2d8 100%)}
+body[data-theme=dark],body[data-theme=midnight] {
+  --ink:#f1edff;
+  --muted:#b1a9c9;
+  background:radial-gradient(circle at 20% 10%,#352a5a,#17142b 65%)}
+body[data-theme=dark] .panel,body[data-theme=dark] .setup-card,body[data-theme=dark] .pause-card,body[data-theme=dark] .modal-card,body[data-theme=midnight] .panel,body[data-theme=midnight] .setup-card,body[data-theme=midnight] .pause-card,body[data-theme=midnight] .modal-card {
+  background:#292342}
+body[data-theme=forestTheme] {
+  background:radial-gradient(circle at 15% 10%,#fff,#e4f7e8 48%,#d7ecdf 100%)}
+@media(max-width:520px) {
+  .setting-grid {
+  grid-template-columns:1fr}
+.toggle-row {
+  flex-direction:column}
+.setup-card {
+  padding:22px}
+}
+
+/* A clearly recognizable ladder: two rails plus evenly spaced rungs. */
+.ladder {
+  width: 42px;
+  box-sizing:border-box;
+  transform-origin:center center;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 11px,
+    #d98226 11px,
+    #d98226 16px,
+    transparent 16px,
+    transparent 27px
+  );
+  border-left: 7px solid #f2a83e;
+  border-right: 7px solid #f2a83e;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px #86602b55;
+}
+.ladder::before,
+.ladder::after {
+  display: none;
+}
+
+
