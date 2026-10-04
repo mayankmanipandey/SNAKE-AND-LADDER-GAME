@@ -53,16 +53,7 @@ Snake and Ladder Game/
 - Web Audio API for sound effects
 - Google Fonts: Baloo 2 and Nunito
 
-## Deploy with GitHub Pages
-
-1. Push the project to a GitHub repository.
-2. Open **Settings > Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the branch containing the project and the folder containing `index.html`.
-5. Save and open the generated Pages URL.
-
-If the game is kept in a subfolder of a larger repository, select that folder as the Pages source or move the game files to the repository root.
-
 ## License
 
-Add a license that matches how you want others to use the project. The MIT License is a common choice for open-source projects.
+NONE
+
